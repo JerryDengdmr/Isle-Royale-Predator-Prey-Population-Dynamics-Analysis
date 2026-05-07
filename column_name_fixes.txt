@@ -1,0 +1,50 @@
+CRITICAL COLUMN NAME FIXES NEEDED:
+
+Based on the actual data exploration results, these column names need to be updated throughout the code:
+
+WOLF_MOOSE_YEARLY dataset:
+- 'Wolves' → 'wolves' (lowercase)
+- 'Moose' → 'moose' (lowercase) 
+- 'Year' → 'year' (lowercase)
+
+MOOSE_DEATHS dataset:
+- 'Age' → 'Age at death'
+- 'Year' → 'Year of birth' (for birth year) or need to calculate death year
+- No bone marrow fat column exists - remove references to it
+
+SPECIFIC FIXES NEEDED:
+
+1. Data Cleaning section:
+   - Change 'Age' to 'Age at death'
+   - Remove bone marrow fat handling code
+   - Add cranial volume handling if needed
+
+2. EDA Numeric Variable section:
+   - Change all 'Wolves' to 'wolves'
+   - Change 'Year' to 'year'
+
+3. EDA Categorical-Categorical section:
+   - Need to create decade from 'Year of birth' not 'Year'
+   - Or use a different approach
+
+4. EDA Categorical-Numeric section:
+   - Change 'Age' to 'Age at death'
+
+5. EDA Numeric-Numeric section:
+   - Change 'Wolves' to 'wolves'
+   - Change 'Moose' to 'moose'
+   - Change 'Year' to 'year'
+
+6. Inference sections:
+   - Update all variable references to match actual column names
+
+7. Regression section:
+   - Change 'Moose' to 'moose' as outcome
+   - Change 'Wolves' to 'wolves' as predictor
+   - Update environmental variable references
+
+8. Classification section:
+   - Change 'Age' to 'Age at death'
+   - Update wolf population merging logic
+
+The code will fail to run without these fixes because it's trying to access columns that don't exist!

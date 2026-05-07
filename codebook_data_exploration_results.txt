@@ -1,0 +1,10 @@
+Paste the output from running the codebook exploration code cell here.
+
+This should include:
+- Wolf_moose_yearly dataset column names and data types
+- Basic statistics for wolf_moose_yearly
+- Moose_deaths dataset column names and data types  
+- Basic statistics for moose_deaths
+- Any categorical variables with their unique values
+
+Once you paste the results here, I'll help you create the proper codebook entries based on the actual data.

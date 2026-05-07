@@ -1,0 +1,19 @@
+QUICK FIX FOR NUMERIC VARIABLE SECTION:
+
+You need to change these 3 lines in the numeric variable section:
+
+1. Line with Q-Q plot:
+   CHANGE: stats.probplot(wolf_moose_cleaned['Wolves'].dropna(), dist="norm", plot=ax4)
+   TO:     stats.probplot(wolf_moose_cleaned['wolves'].dropna(), dist="norm", plot=ax4)
+
+2. Line with outlier filtering:
+   CHANGE: outliers = wolf_moose_cleaned[(wolf_moose_cleaned['Wolves'] < lower_bound) | 
+                                        (wolf_moose_cleaned['Wolves'] > upper_bound)]
+   TO:     outliers = wolf_moose_cleaned[(wolf_moose_cleaned['wolves'] < lower_bound) | 
+                                        (wolf_moose_cleaned['wolves'] > upper_bound)]
+
+3. Line in the outlier print statement:
+   CHANGE: print(f"  {row['Year']}: {row['Wolves']} wolves")
+   TO:     print(f"  {row['year']}: {row['wolves']} wolves")
+
+These are the only remaining issues in the numeric variable section. Just find these lines and change 'Wolves' to 'wolves' and 'Year' to 'year'.
